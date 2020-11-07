@@ -1,0 +1,51 @@
+{
+  "name": "hs-shampoo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "10.0.0",
+    "nextjs-fonts": "^0.22.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-slick": "^0.27.12",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/polyfill": "7.4.4",
+    "@types/jest": "^24.0.18",
+    "@typescript-eslint/eslint-plugin": "1.13.0",
+    "@typescript-eslint/parser": "1.13.0",
+    "@zeit/next-css": "^1.0.1",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-eslint": "10.0.2",
+    "babel-loader": "8.0.6",
+    "bootstrap": "4.3.1",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-typescript": "^5.0.0",
+    "eslint-config-airbnb-typescript-prettier": "^1.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "file-loader": "^6.2.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "react-docgen-typescript-loader": "3.1.0",
+    "node-sass": "4.14.1",
+    "stylelint": "10.1.0",
+    "stylelint-config-recommended": "2.2.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.8.0",
+    "ts-jest": "^24.0.2",
+    "url-loader": "^4.1.1"
+  }
+}

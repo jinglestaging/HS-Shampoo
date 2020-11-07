@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+
+   .about-hs {
+    &__article-list {
+
+         .about-hs-item {
+            text-align: right;
+            margin-top: 20px;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+
+            /*
+                Silver Container
+                ========================================================================== */
+
+            &.is-reversed {
+                text-align: left;
+                flex-direction: row-reverse;
+
+                .about-hs-item-item__gradient {
+                    background-image: linear-gradient($C_light_blue, $C_dark_blue);
+                }
+                .about-hs-item-image {
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        right: auto;
+                        left: -140px;
+                    }
+                }
+                .about-hs-item-content-wrapper {
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        align-items: flex-end;
+                    }
+                }
+                .about-hs-item-text-wrapper {
+                    padding-right: 20px;
+                    padding-left: 0;
+
+                    &-item__description {
+                        margin-right: auto;
+                        margin-left: 0;
+
+                        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                            margin-left: auto;
+                        }
+                    }
+
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        padding: 0 20px;
+                    }
+                }
+                .about-hs-item-content-wrapper-item__subtitle {
+                    @include T3($C_white);
+
+                    &:before {
+                        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                            left            : 120px;
+                            right           : auto;
+                            background-color: $C_white;
+                        }
+                        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                            left            : auto;
+                            right           : 70px;
+                            background-color: $C_white;
+                        }
+                    }
+
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+                .about-hs-item-content-wrapper-item__sex{
+                    color: $C_white;
+
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        top: 55px;
+                    }
+                }
+                .about-hs-item-content-wrapper-item__title {
+                    @include H3($C_white);
+                }
+            }
+
+            /*
+                Default Container
+                ========================================================================== */
+
+            &-content-wrapper {
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &-item__subtitle {
+                    @include T3();
+                    position: relative;
+                    
+                    &:before {
+                        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                            content         : '';
+                            display         : block;
+                            position        : absolute;
+                            left            : auto;
+                            right           : 120px;
+                            bottom          : 7px;
+                            width           : 205px;
+                            height          : calc(1px);
+                            z-index         : 0;
+                            overflow        : hidden;
+                            background-color: $C_dark_blue;
+                        }
+                        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                            content         : '';
+                            display         : block;
+                            position        : absolute;
+                            left            : 70px;
+                            right           : auto;
+                            bottom          : 3px;
+                            width           : 50px;
+                            height          : calc(1px);
+                            z-index         : 0;
+                            overflow        : hidden;
+                            background-color: $C_dark_blue;
+                        }
+                    }
+
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+
+                &-item__sex {
+                    font-size: 16px;
+                     font-family: $notoMedium;
+                     color: $C_dark_blue;
+                     letter-spacing: 4px;
+
+                     @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        font-size: 11px;
+                        position: absolute;
+                        top: 60px;
+                    }
+                }
+    
+                &-item__title {
+                    @include H3();
+                }
+
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    padding: 25px 15px;
+                    height: 258px;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+
+            }
+
+            &-text-wrapper {
+                padding-right: 0;
+                padding-left: 20px;
+
+                &-item__description {
+                    @include C3-gray;
+                    margin: 20px 0;
+                    margin-left: auto;
+                    max-width: 588px; // wrap long description text
+                    
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        line-height: 16px !important;
+                    }
+                }
+
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    padding: 0 20px;
+                }
+
+            }
+
+            &-item__image-wrapper {
+                background-color: $C_ultra_light_gray;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+
+                .about-hs-item-image {
+                    position: absolute;
+                    right: 50%;
+                    bottom: 0;
+                    z-index: 99;
+                    transform: translateX(50%);
+
+                    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                        right: -140px;
+                        bottom: -40px;
+                        height: 316px;
+                        transform: translateX(0) scale(0.8);
+                    }
+                }
+
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    height: 258px;
+                }
+            }
+
+            &-item__gradient {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 400px;
+                background-image: linear-gradient($C_ultra_light_gray, $C_light_gray);
+
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    height: 258px;
+                }
+            }
+
+            .is-cover {
+                position: relative;
+                z-index: 999;
+
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    position: absolute;
+                    left: 0;
+                    min-height: 144px;
+                }
+            }
+
+            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                display: flex;
+            }
+
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                text-align: center !important;
+                min-height: 402px;
+                background-color: $C_ultra_light_gray;
+            }
+        }
+    }
+ }
+
+ // image cover config (nopadding box)
+ .row-no-padding
+ {
+    .is-nopadding 
+    {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}

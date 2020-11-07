@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Main app SCSS File
+   ========================================================================== */
+    // Bootstrap
+    // @import "variables";
+    @import "../../node_modules/bootstrap/scss/functions";
+    @import "../../node_modules/bootstrap/scss/variables";
+    @import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+    // Components
+    @import "../../components/Carousel/_Carousel.scss";
+    @import "../../components/HomepageBackground/_HomepageBackground.scss";
+    @import "../../components/Cards/ProductCard/_ProductCard.scss";
+    @import "../../components/SiteHeader/NavigationPrimary/_NavigationPrimary.scss";
+    @import "../../components/SiteHeader/NavigationSecondary/_NavigationSecondary.scss";
+    @import "../../components/SiteHeader/_Burger.scss";
+    @import "../../components/SiteHeader/_SiteHeader.scss";
+    @import "../../components/SiteFooter/_SiteFooter.scss";
+
+    // Modules
+    @import './modules/buttons.scss';
+
+    // Pages
+    @import './pages/_HomePage.scss';

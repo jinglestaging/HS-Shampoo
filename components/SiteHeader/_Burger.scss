@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Burger
+   ========================================================================== */
+
+   .burger {
+    position: relative;
+    display: block;
+    width: 23px;
+    height: 19px;
+    cursor: pointer;
+
+    &__line {
+        height: 2px;
+        width: 23px;
+        position: absolute;
+        display: block;
+        border-radius: 2px;
+        background-color: $C_white;
+        transition-duration: 0.5s;
+        
+        &:nth-of-type(1) {
+            top: 0;
+        }
+        &:nth-of-type(2) {
+            top: 7px;
+        }
+        &:nth-of-type(3) {
+            top: 14px;
+        }
+    }
+
+    &.is-active {
+        .burger__line {
+            &:nth-of-type(1) {
+                transform: translateY(7px) rotateZ(45deg);
+            }
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+            &:nth-of-type(3) {
+                transform: translateY(-7px) rotateZ(-45deg);
+            }
+        }
+    }
+}

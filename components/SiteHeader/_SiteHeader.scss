@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+   $header_height_mobile: 83px;
+   $header_height_desktop: 160px;
+
+   .header {
+       min-height: $header_height_mobile;;
+       position: relative;
+       z-index: 999;
+
+       @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+           min-height: $header_height_desktop;
+       }
+   }
+
+   .header-branding {
+    position: absolute;
+    top: 13px;
+    display: block;
+    height: 58px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-left: -42px;
+    z-index: 999;
+    cursor: pointer;
+
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        top: 39px;
+        margin-left: -16px;
+        height: 80px;
+    }
+}
+
+.header-nav {
+    top: 85px;
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: $C_light_blue;
+    transform: translateX(-100%);
+
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        top: 0;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        position: relative;
+        transform: translate(0);
+    }
+
+    &.is-expanded {
+        transform: translateX(0vw);
+    }
+
+    &__primary {
+        padding: 30px 0px 30px;
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            padding: 0px 0px;
+            margin-left: 287px;
+        }
+    }
+    &__secondary {
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+
+        }
+    }
+}
+
+.header-burger {
+    color: white;
+    position: absolute;
+    top: 19px;
+    right: 17px;
+    float: right;
+    display: block;
+
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        display: none;
+        top: 37px;
+    }
+}
+
+.l-header-container {
+    width: 100%;
+    max-width: map-get($container-max-widths, xxl);
+    position: relative;
+    margin: 0 auto;
+}

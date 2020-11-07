@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+
+    /* @import must be at top of file, otherwise CSS will not work */
+    // @import url("//hello.myfonts.net/count/3a0305");
+
+    /* NotoSans JP */
+    @font-face {font-family: 'NotoSansJP-Medium';src: url('/static/fonts/NotoSansJP-Medium.otf') format('opentype');}
+    @font-face {font-family: 'NotoSansJP-Regular';src: url('/static/fonts/NotoSansJP-Regular.otf') format('opentype');}
+    @font-face {font-family: 'NotoSansJP-Black';src: url('/static/fonts/NotoSansJP-Black.otf') format('opentype');}

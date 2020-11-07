@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+   $padding_top: 15px;
+   $padding_right: 45px;
+   $padding_bottom: 15px;
+   $padding_left: 45px;
+
+
+    .button
+    {
+        font-size: 12px;
+        padding-top: 8px; 
+        padding-bottom: 8px; 
+        width: 136px;
+        text-align: center;
+        background-color: transparent;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.4s ease, color 0.4s ease;
+
+        &--default {
+            color: $C_dark_blue;
+            border: 1px solid $C_dark_blue;
+
+            &:hover, &:focus {
+                color: $C_white;
+                background-color: $C_dark_blue;
+            }
+        }
+
+        &--white {
+            color: $C_white;
+            border: 1px solid $C_white;
+
+            &:hover, &:focus {
+                color: $C_dark_blue;
+                background-color: $C_white;
+            }
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            width: 175px;
+            font-size: 14px;
+            padding-top: $padding_top;
+            padding-bottom: $padding_bottom; 
+        }
+    }

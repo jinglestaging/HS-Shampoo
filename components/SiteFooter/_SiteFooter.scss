@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+   .footer {
+    text-align: left;
+    padding: 25px 0 50px 0;
+    margin-top: 20px;
+    background-color: $C_dark_blue;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        margin-top: 40px;
+        padding: 115px 0 75px 0;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-family: $notosans;
+        color: $C_white;
+        line-height: 28px;
+        display: block;
+    }
+    &__subtitle {
+        @include C3;
+        font-size: 15px !important;
+        text-decoration: none;
+    }
+
+    .footer-nav {
+        @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+            margin-top: 22px;
+        }
+
+
+        &__item {
+            @include C3(3);
+            /* line-height: 3; */
+
+            @media screen and (min-width: map-get($grid-breakpoints, md)) {
+                line-height: 1.65;
+            }
+        }
+        &__link {
+            @include C3;
+            font-size: 12px !important;
+            text-decoration: none;
+            &:hover, &:focus { text-decoration: underline; }
+        }
+        &__icon {
+            display: flex;
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    
+    .row {
+        margin: 0 auto;
+        max-width: 1410px;
+    }
+
+    .col-lg-6 {
+        &:nth-child(n+2):nth-child(-n+4) {
+            display: none;
+        }
+    }
+
+    @media screen and ( min-width: map-get($grid-breakpoints , lg) ) {
+        .col-lg-6 {
+            display: inline !important;
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+}

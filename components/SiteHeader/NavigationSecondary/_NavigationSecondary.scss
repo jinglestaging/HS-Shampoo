@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Navigation Secondary
+   ========================================================================== */
+
+   .nav-secondary {
+
+    /* Desktop */
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        display: none;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        position: absolute;
+        top: 0;
+        right: 50px;
+        list-style-type: none;
+        z-index: 30;
+
+        &__item {
+            display: inline-block;
+            font-size: 0;
+            color: transparent;
+
+            &.is-icon {
+                    &.image-search {
+                        background-image: url("/static/img/icons/icon-header-search.svg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                    &.image-message {
+                        background-image: url("/static/img/icons/icon-header-message.svg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+        }
+
+        &__link {
+            display: inline-block;
+            width: 50px;
+            height: 22px;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Navigation Primary
+   ========================================================================== */
+
+   .nav-primary {
+        list-style-type: none;
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            position: relative;
+        }
+
+        &__item {
+            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                display: inline-block;
+
+                &.is-icon {
+                    position: relative;
+                    top: 5px;
+
+                    &.image-search {
+                        background-image: url("/static/img/icons/icon-header-search.svg");
+                        background-position: center bottom;
+                        background-repeat: no-repeat;
+                    }
+
+                    &.image-message {
+                        background-image: url("/static/img/icons/icon-header-message.svg");
+                        background-position: center bottom;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            
+            & + &{
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    &.is-icon { 
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            padding: 39px 25px 0px 25px;
+            display: block;
+            text-transform: uppercase;
+            color: $C_white;
+            font-size: 33px;
+            font-family: $notoMedium;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+
+            &.is-active {
+                background-color: $C_light_blue;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 25px;
+                height: 1px;
+                width: calc(100% - 50px);
+                background: $C_white;
+                opacity: 0;
+                transition: 0.4s all ease-in-out;
+            }
+
+            @media screen and (max-width: 1210px) {
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 14px !important;
+
+                &:after {
+                    left: 15px;
+                    width: calc(100% - 30px);
+                }
+            }
+
+            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                @include T2($fontsize: 18px);
+                border-bottom: none;
+
+                &:hover:after, &.is-active, &:focus:after {
+                    opacity: 1;
+                }
+            }
+
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }

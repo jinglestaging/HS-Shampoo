@@ -1,0 +1,149 @@
+/* ==========================================================================
+    Carousel - Container for Slick Slider
+    ========================================================================== */
+
+    $carousel_height_mobile: 447px;
+    $carousel_height_desktop: 640px;
+
+    .slick-dots {
+        button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            padding: 0px;
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+
+            &:before {
+                font-family: slick, Arial, Helvetica, sans-serif;
+                font-size: 50px;
+                line-height: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                content: "\2022";
+                text-align: center;
+                opacity: 1;
+                color: white;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                transition-duration: 0.5s;
+            }
+            &:hover, &:focus {
+                &:before {
+                    color: $C_light_blue;;
+                }
+            }
+
+        }
+    }
+    .carousel {
+        overflow: hidden;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* Themes */
+        &--blue {
+            // background: $C_light_blue;
+            // background-image: linear-gradient(0deg, $C_dark_blue 0%, rgba(0,185,242,0.00) 41%);
+        }
+
+        // Override default container's behaviour on mobile
+        .container {
+            @media screen and (max-width: map-get($grid-breakpoints, xl)) {
+                max-width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            padding-bottom: 30px;
+        }
+    }
+
+/*
+    Slick
+    ========================================================================== */
+
+    /* Gutter between slides */
+    .slick-slide > div {
+        padding: 10px 10px;
+
+        @media screen and (min-width: 500px) {
+            padding: 10px 30px;
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, md)) {
+            padding: 30px 38px;
+        }
+    }
+    
+    .slick-list {
+        min-height: $carousel_height_mobile;
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            min-height: $carousel_height_desktop;
+        }
+    }
+
+    .slick-next:before, .slick-prev:before {
+        content: '';
+        height: 35px;
+        width: 60px;
+        display: block;
+        background-repeat: no-repeat;
+        transition-duration: 0.5s;
+    }
+
+    /* Dots */
+    .slick-dots {
+        position: relative;
+        bottom: -15px !important;
+        display: block;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            bottom: 30px !important;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0 12px !important;
+            padding: 0;
+
+            button::before {
+                font-size: 40px !important;
+                color: $C_white !important;
+                opacity: 1 !important;
+                left: -3px !important;
+                top: -3px !important;
+            }
+
+            &.slick-active {
+                button {
+                    border: 2px solid $C_white;
+                    border-radius: 10px;
+                }
+
+                button::before {
+                    color: transparent !important;
+                }
+            }
+        }
+
+        li, li button {
+            width: 14px !important;
+            height: 14px !important;
+            cursor: pointer;
+        }
+    }
